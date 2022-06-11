@@ -5,7 +5,9 @@ import {ErrorFallback} from "@app/shared/component/error-fallback";
 
 export const AppComponent = () => {
 	return <>
-		<div className="left-col"></div>
+		<div className="left-col">
+			test
+		</div>
 		<div className="right-col">
 			<ErrorBoundary FallbackComponent={ErrorFallback}>
 				<AppRoutingComponent/>

@@ -1,6 +1,6 @@
 import React from "react";
 import { AppComponent } from "@app/app.components";
-import "@assets/style/App.scss";
+import "./App.scss";
 
 function App(): React.ReactElement | null {
   return (
