@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/robo-skills/build/static/css/main.19725a40.css",
+    "main.js": "/robo-skills/build/static/js/main.ea29b2fe.js",
+    "static/js/787.1e554494.chunk.js": "/robo-skills/build/static/js/787.1e554494.chunk.js",
+    "index.html": "/robo-skills/build/index.html",
+    "main.19725a40.css.map": "/robo-skills/build/static/css/main.19725a40.css.map",
+    "main.ea29b2fe.js.map": "/robo-skills/build/static/js/main.ea29b2fe.js.map",
+    "787.1e554494.chunk.js.map": "/robo-skills/build/static/js/787.1e554494.chunk.js.map"
+  },
+  "entrypoints": ["static/css/main.19725a40.css", "static/js/main.ea29b2fe.js"]
+}
