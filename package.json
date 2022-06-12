@@ -6,7 +6,7 @@
     "rm": "rm -rf node_modules && rm yarn.lock || rd /s /q node_modules",
     "yrn:update": "yarn upgrade-interactive --latest",
     "i": "yarn install",
-    "lint": "eslint --debug 'src/**/*.{js,jsx,ts,tsx}'",
+    "prettier:format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
     "------------------ ----------------------- ------------------": "",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build && mv ./build/index.html ./",
@@ -18,6 +18,9 @@
     "git:push": "git push",
     "git:run": "yarn run git:add && yarn run git:commit && yarn run git:push"
   },
+  "pre-commit": [
+    "prettier:format"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -37,13 +40,14 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.3.0",
-    "@typescript-eslint/parser": "^5.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-typescript": "^0.14.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.6.2",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.4",

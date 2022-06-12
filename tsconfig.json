@@ -2,11 +2,7 @@
   "extends": "./tsconfig.alias.json",
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -21,10 +17,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
-
-
-
-
     "sourceMap": false,
     "alwaysStrict": true,
     "noImplicitAny": true,
@@ -34,14 +26,9 @@
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "rootDir": "src",
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
+    "typeRoots": ["./node_modules/@types"],
     "outDir": "build/dist",
     "suppressImplicitAnyIndexErrors": true
-
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
