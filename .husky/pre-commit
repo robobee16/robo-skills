@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-echo "$(dirname $(dirname "$PWD"))"
+echo "$(dirname -- "$1")"
 cp ./build/index.html ./
 git add .
 
