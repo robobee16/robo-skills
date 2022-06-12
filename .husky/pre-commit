@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
-parentdir="$(dirname "$dir")"
-echo $parentdir
+echo "$(dirname -- "$PWD")"
 cp ./build/index.html ./
 git add .
 
