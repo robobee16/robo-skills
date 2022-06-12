@@ -56,12 +56,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn build && lint-staged"
     }
   },
   "lint-staged": {
     "*.{jsx,ts,tsx,css,md,json}": [
-      "react-app-rewired build",
+      "git add .",
       "prettier --write './**/*.{jsx,ts,tsx,css,md,json}'"
     ]
   },
