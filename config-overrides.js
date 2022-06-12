@@ -5,10 +5,10 @@ module.exports = function override(config) {
   const paths = Object.keys(alias.compilerOptions.paths);
 
   paths.forEach((key) => {
-    config.resolve.alias[key] = path.resolve(
+    config.resolve.alias[key.replace('/*', '')] = path.resolve(
       __dirname,
       alias.compilerOptions.baseUrl,
-      alias.compilerOptions.paths[key][0]
+      alias.compilerOptions.paths[key][0].replace('/*', '')
     );
   });
 

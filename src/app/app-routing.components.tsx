@@ -6,7 +6,7 @@ import { MainComponent } from '@components/main/main.component';
 export const AppRoutingComponent = (): React.ReactElement | null => {
   return useRoutes([
     {
-      path: 'main/*',
+      path: '',
       element: <MainComponent />,
     },
 

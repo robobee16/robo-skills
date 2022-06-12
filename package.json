@@ -6,7 +6,7 @@
     "rm": "rm -rf node_modules && rm yarn.lock || rd /s /q node_modules",
     "yrn:update": "yarn upgrade-interactive --latest",
     "i": "yarn install",
-    "prettier:format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
+    "prettier:format": "prettier --write './**/*.{jsx,ts,tsx,css,md,json}'",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
     "------------------ ----------------------- ------------------": "",
     "start": "react-app-rewired start",
@@ -59,8 +59,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,css,md,json}": [
-      "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'"
+    "*.{jsx,ts,tsx,css,md,json}": [
+      "prettier --write './**/*.{jsx,ts,tsx,css,md,json}'"
     ]
   },
   "eslintConfig": {
