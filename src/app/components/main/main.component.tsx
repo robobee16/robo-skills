@@ -6,9 +6,9 @@ export const MainComponent = () => {
   return (
     <div>
       this is main component test
-      <Button>
-        <Link to="/skills">Skills</Link>
-      </Button>
+      <Link to="/skills">
+        <Button>Skills</Button>
+      </Link>
     </div>
   );
 };
