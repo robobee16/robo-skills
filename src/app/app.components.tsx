@@ -6,7 +6,7 @@ import { ErrorFallback } from '@app/shared/component/error-fallback';
 export const AppComponent = () => {
   return (
     <div className="main-wrap">
-      <div className="header">Header 11111</div>
+      <div className="header">Header 2</div>
       <div className="content">
         <div className="left-wrap">Left menu</div>
         <div className="right-wrap">
