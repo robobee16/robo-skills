@@ -57,16 +57,6 @@
   "pre-commit": [
     "build"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{jsx,ts,tsx,css,md,json}": [
-      "prettier --write './**/*.{jsx,ts,tsx,css,md,json}'"
-    ]
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
