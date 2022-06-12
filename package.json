@@ -8,7 +8,7 @@
     "yrn:update": "yarn upgrade-interactive --latest",
     "i": "yarn install",
     "prettier:format": "prettier --write './**/*.{jsx,ts,tsx,css,md,json}'",
-    "configure-husky": "rm -rf .husky & npx husky install && npx husky add .husky/pre-commit \"yarn build && npx --no-install lint-staged\"",
+    "prepare:husky": "rm -rf .husky & npx husky install && npx husky add .husky/pre-commit \"yarn build && npx --no-install lint-staged\"",
     "------------------ ----------------------- ------------------": "",
     "start": "craco start",
     "build": "craco build && cp ./build/index.html ./",

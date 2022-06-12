@@ -5,7 +5,7 @@ import styles from './skills-details.module.scss';
 export const SkillsDetailsComponent = () => {
   console.log('gaga------------------123123-------------------', styles.skillDetailsWrap);
   return (
-    <div className={styles.skillDetailsWrap}>
+    <div className={styles.red}>
       this is skills details component
       <Link to="..">
         <Button className={styles.red}>back to skills </Button>
