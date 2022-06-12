@@ -1,6 +1,7 @@
 {
   "name": "robo-skills",
   "version": "1.0.0",
+  "homepage": "https://robobee16.github.io/robo-skills/build/",
   "private": true,
   "scripts": {
     "rm": "rm -rf node_modules && rm yarn.lock || rd /s /q node_modules",
