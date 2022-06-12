@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { Button } from 'semantic-ui-react';
 
 export const SkillsComponent = () => {
@@ -7,8 +7,12 @@ export const SkillsComponent = () => {
     <div>
       this is skills component
       <Button>
-        <Link to="/">back to main</Link>
+        <Link to="..">back to main ye</Link>
       </Button>
+      <Button>
+        <Link to="/skills/123">Skill Details</Link>
+      </Button>
+      <Outlet />
     </div>
   );
 };
