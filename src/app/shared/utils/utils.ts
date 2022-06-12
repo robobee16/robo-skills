@@ -1,10 +1,7 @@
-import { DependencyList, useCallback, useEffect, useState } from "react";
-import { Observable, Subject, Subscription } from "rxjs";
+import { DependencyList, useCallback, useEffect, useState } from 'react';
+import { Observable, Subject, Subscription } from 'rxjs';
 
-export const useRxEffect = (
-  subscribe: () => Subscription,
-  deps?: DependencyList
-): (() => void) => {
+export const useRxEffect = (subscribe: () => Subscription, deps?: DependencyList): (() => void) => {
   const [sub, setSub] = useState<Subscription | null>(null);
 
   const unsub = useCallback(() => {
@@ -15,9 +12,7 @@ export const useRxEffect = (
     const subscription = subscribe();
     setSub(subscription);
     return () => {
-      console.log(
-        "unsubscribeunsubscribeunsubscribe------------------------------------"
-      );
+      console.log('unsubscribeunsubscribeunsubscribe------------------------------------');
       subscription.unsubscribe();
     };
   }, deps);
@@ -25,9 +20,7 @@ export const useRxEffect = (
   return unsub;
 };
 
-export const useSubject = <T>(
-  func: (objs: Subject<T>) => Observable<T>
-): Subject<T> => {
+export const useSubject = <T>(func: (objs: Subject<T>) => Observable<T>): Subject<T> => {
   const [subject, setSubject] = useState<Subject<T>>(new Subject<T>());
   useEffect(() => {
     const newSub = new Subject<T>();

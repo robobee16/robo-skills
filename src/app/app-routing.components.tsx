@@ -1,12 +1,12 @@
-import React from "react";
-import { useRoutes } from "react-router-dom";
-import { NotFound } from "@app/shared/component/not-found";
-import { MainComponent } from "@components/main/main.component";
+import React from 'react';
+import { useRoutes } from 'react-router-dom';
+import { NotFound } from '@app/shared/component/not-found';
+import { MainComponent } from '@components/main/main.component';
 
 export const AppRoutingComponent = (): React.ReactElement | null => {
   return useRoutes([
     {
-      path: "main/*",
+      path: 'main/*',
       element: <MainComponent />,
     },
 
@@ -14,7 +14,7 @@ export const AppRoutingComponent = (): React.ReactElement | null => {
      * default component
      * */
     {
-      path: "*",
+      path: '*',
       element: <NotFound />,
     },
   ]);

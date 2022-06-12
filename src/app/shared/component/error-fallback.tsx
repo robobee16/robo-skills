@@ -1,4 +1,4 @@
-import React, { forwardRef, memo } from "react";
+import React, { forwardRef, memo } from 'react';
 
 interface Props {
   error: Error;
@@ -9,7 +9,7 @@ export interface Ref {}
 
 export const ErrorFallback = memo(
   forwardRef<Ref, Props>(({ error, resetErrorBoundary }) => {
-    console.log("PortalGuideComponent-------------------------------------");
+    console.log('PortalGuideComponent-------------------------------------');
 
     return (
       <div role="alert">

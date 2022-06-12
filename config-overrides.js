@@ -1,5 +1,5 @@
-const path = require("path");
-const alias = require("./tsconfig.alias.json");
+const path = require('path');
+const alias = require('./tsconfig.alias.json');
 
 module.exports = function override(config) {
   const paths = Object.keys(alias.compilerOptions.paths);

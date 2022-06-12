@@ -1,6 +1,6 @@
-import React from "react";
-import { AppComponent } from "@app/app.components";
-import "./App.scss";
+import React from 'react';
+import { AppComponent } from '@app/app.components';
+import './App.scss';
 
 function App(): React.ReactElement | null {
   return (
