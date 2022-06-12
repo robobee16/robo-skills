@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
-echo "$(dirname "$dir")"
+parentdir="$(dirname "$dir")"
+echo $parentdir
 cp ./build/index.html ./
 git add .
 
