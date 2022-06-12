@@ -8,7 +8,7 @@
     "yrn:update": "yarn upgrade-interactive --latest",
     "i": "yarn install",
     "prettier:format": "prettier --write './**/*.{jsx,ts,tsx,css,md,json}'",
-    "configure-husky": "rm -rf .husky & npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
+    "configure-husky": "rm -rf .husky & npx husky install && npx husky add .husky/pre-commit \"yarn build && npx --no-install lint-staged\"",
     "------------------ ----------------------- ------------------": "",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build && cp ./build/index.html ./",
