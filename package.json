@@ -10,10 +10,9 @@
     "prettier:format": "prettier --write './**/*.{jsx,ts,tsx,css,md,json}'",
     "configure-husky": "rm -rf .husky & npx husky install && npx husky add .husky/pre-commit \"yarn build && npx --no-install lint-staged\"",
     "------------------ ----------------------- ------------------": "",
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build && cp ./build/index.html ./",
-    "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject",
+    "start": "craco start",
+    "build": "craco build && cp ./build/index.html ./",
+    "test": "craco test",
     "------------------ git ------------------": "",
     "git:add": "git add .",
     "git:commit": "git commit -a -m 'auto'",
@@ -21,6 +20,7 @@
     "git:run": "yarn run git:add && yarn run git:commit && yarn run git:push"
   },
   "dependencies": {
+    "@craco/craco": "^6.4.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.0",
@@ -29,7 +29,6 @@
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
     "react": "^18.1.0",
-    "react-app-rewired": "2.2.1",
     "react-dom": "^18.1.0",
     "react-error-boundary": "^3.1.4",
     "react-router-dom": "6.3.0",
@@ -41,6 +40,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
+    "craco-alias": "^3.0.1",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
