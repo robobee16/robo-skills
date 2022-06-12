@@ -7,6 +7,7 @@
     "yrn:update": "yarn upgrade-interactive --latest",
     "i": "yarn install",
     "prettier:format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
+    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
     "------------------ ----------------------- ------------------": "",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build && mv ./build/index.html ./",
@@ -18,9 +19,6 @@
     "git:push": "git push",
     "git:run": "yarn run git:add && yarn run git:commit && yarn run git:push"
   },
-  "pre-commit": [
-    "prettier:format"
-  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -47,11 +45,24 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-typescript": "^0.14.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
     "pre-commit": "^1.2.2",
     "prettier": "^2.6.2",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.4",
     "typescript": "^4.7.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "/**/*.{js,jsx,ts,tsx,css,md,json}": [
+      "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": [
