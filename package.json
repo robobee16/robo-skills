@@ -11,7 +11,7 @@
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
     "------------------ ----------------------- ------------------": "",
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build && mv ./build/index.html ./",
+    "build": "react-app-rewired build && cp ./build/index.html ./",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "------------------ git ------------------": "",
@@ -61,9 +61,6 @@
   },
   "lint-staged": {
     "*.{jsx,ts,tsx,css,md,json}": [
-      "react-app-rewired build",
-      "mv ./build/index.html ./",
-      "git add .",
       "prettier --write './**/*.{jsx,ts,tsx,css,md,json}'"
     ]
   },

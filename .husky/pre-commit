@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+cp ./build/index.html ./
+git add .
 
+. "$(dirname -- "$0")/_/husky.sh"
 npx --no-install lint-staged
