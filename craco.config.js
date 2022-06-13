@@ -1,6 +1,26 @@
 const CracoAlias = require('craco-alias');
 
 module.exports = {
+  webpack: {
+    configure: (config) => {
+      config.module.rules
+        .find(({ oneOf }) => !!oneOf)
+        .oneOf.filter(({ use }) => {
+          return JSON.stringify(use)?.includes('/css-loader');
+        })
+        .forEach(({ use }) => {
+          const options = use.find(({ loader }) => loader?.includes('/css-loader')).options;
+          if (options.modules) {
+            options.modules = {
+              ...options.modules,
+              exportLocalsConvention: 'camelCase',
+            };
+          }
+        });
+
+      return config;
+    },
+  },
   plugins: [
     {
       plugin: CracoAlias,
