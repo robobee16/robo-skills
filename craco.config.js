@@ -3,6 +3,10 @@ const CracoAlias = require('craco-alias');
 module.exports = {
   webpack: {
     configure: (config) => {
+      /*
+       * https://github.com/vercel/next.js/discussions/11267
+       * making css module work with camelCase
+       * */
       config.module.rules
         .find(({ oneOf }) => !!oneOf)
         .oneOf.filter(({ use }) => {
