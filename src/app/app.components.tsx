@@ -4,7 +4,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { ErrorFallback } from '@app/shared/component/error-fallback';
 
 export const AppComponent = () => {
-  console.log('AppComponent------------------------------------- render');
+  console.log('AppComponent ------------------------------------- render');
   return (
     <div className="main-wrap">
       <div className="header">Header</div>
